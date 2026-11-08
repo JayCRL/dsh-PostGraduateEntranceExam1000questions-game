@@ -54,6 +54,20 @@ Host 直接下载并解析，所以链接可以是 GitHub Release、对象存储
 
 导入后题库会落到 `%DSH_HOME%\kaoyan-quiz\bank-custom.json`，之后离线也能刷。
 
+## 自己生成题库（脚本）
+
+仓库 `scripts/` 里是完整流水线，**不含任何题目内容**：
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/make_lines.py --pdf 试题分册.pdf --out q_lines.json
+python scripts/make_questions.py q_lines.json questions.json
+python scripts/ocr_answers.py --pdf 答案解析册.pdf --outdir answers_pages --workers 8
+python scripts/make_bank.py --questions questions.json --answers answers_pages --out bank.json
+```
+
+OCR 用 RapidOCR（本地、免费），189 页十几分钟；详见 [scripts/README.md](scripts/README.md)。
+
 ## 题库格式
 
 ```json
@@ -105,6 +119,7 @@ kaoyan-quiz/
 ├── client.js           Client 注册：sidebar.panellist + main 面板
 ├── ui.js               界面（原生 DOM，无框架）
 ├── bank.json           演示题库（5 题）
+├── scripts/            PDF → bank.json 生成脚本
 ├── cordis.patch.yml    插入插件行
 ├── locale/{zh,en}.json 插件管理页文案
 ├── icon.svg
