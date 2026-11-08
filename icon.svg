@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Kaoyan politics quiz">
+  <rect width="48" height="48" rx="12" fill="#b3261e"/>
+  <path d="M13 14.5c0-1.1.9-2 2-2h7.2c1.3 0 2.5.6 3.3 1.6l.5.6.5-.6c.8-1 2-1.6 3.3-1.6H37c1.1 0 2 .9 2 2v19c0 1.1-.9 2-2 2h-7.4c-1.2 0-2.3.5-3.1 1.4l-.5.5-.5-.5c-.8-.9-1.9-1.4-3.1-1.4H11c-1.1 0-2-.9-2-2V14.5z" fill="#fff8f2" opacity=".95"/>
+  <path d="M24 15.2v20.1" stroke="#b3261e" stroke-width="1.4" opacity=".45"/>
+  <path d="M17 34.5l3.2-3.4 2.3 2.2 5.2-5.6" fill="none" stroke="#2f9e63" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
